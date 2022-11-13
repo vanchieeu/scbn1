@@ -2,17 +2,18 @@
 
 int main() {
     int n;
-    scanf("%d", &n);
+    do {
+        scanf("%d", &n);
+    } while (n < 1);
 
-    int a[n];
+    long long a[n];
     for (int i = 0; i < n; i++)
-        scanf("%d", a+i);
+        scanf("%lld", a+i);
 
     int d = 0;
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n; i++)
         if (a[i] == a[i+1]) {
             d++;
-            i++;
         }
 
     printf("%d", d);
